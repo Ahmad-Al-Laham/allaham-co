@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "MonSemiBold";
+  src: url("./assets/fonts/Montserrat-Arabic-SemiBold.otf");
+}
+
+@font-face {
+  font-family: "MonMedium";
+  src: url("./assets/fonts/Montserrat-Arabic-Medium.otf");
+}
+@font-face {
+  font-family: "MonRegular";
+  src: url("./assets/fonts/Montserrat-Arabic-Regular.otf");
+}
+@font-face {
+  font-family: "MonLight";
+  src: url("./assets/fonts/Montserrat-Arabic-Light.otf");
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  background-color: #1f2024 !important;
+}
+:root {
+  --primary: transparent;
+  --secondary: #4ecd9d;
+}
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--secondary) var(--primary);
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 5px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--primary);
+  border-radius: 1px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--secondary);
+  border-radius: 26px;
+  border: 3px solid var(--primary);
+}
