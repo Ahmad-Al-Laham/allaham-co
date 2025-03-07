@@ -34,7 +34,7 @@ body {
 }
 * {
   scrollbar-width: thin;
-  scrollbar-color: var(--secondary) var(--primary);
+  scrollbar-color: #A81015 ;
 }
 
 /* Chrome, Edge, and Safari */
