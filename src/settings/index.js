@@ -4,7 +4,7 @@ export const systemSettings = {
     light: {
       primary: "#A81015",
       secondary: "#79797C",
-      third: "#000000",
+      third: "#dedede",
       fourth: "#79797C",
       black: "#222222",
       white: "#FFFFFF",

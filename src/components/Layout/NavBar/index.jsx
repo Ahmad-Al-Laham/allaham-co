@@ -20,13 +20,7 @@ const NavBar = () => {
       const[searchTerm , setSearchTerm] = useState("");
       const [open,setOpen] = useState(false);
   const navigate = useNavigate();
-  const ref = useRef(null)
 
-  const handleClickOnSearchIcon = (event) => {
-    if (ref.current && ref.current.contains(event.target)) {
-      setSearchBarOpen(true);
-    }
-  };
 
   const listenScrollEvent = (event) => {
     if (document.documentElement.scrollTop < 40) { //not understand
@@ -104,7 +98,7 @@ const NavBar = () => {
 
               <Language/>
           
-            </div>
+            
 
             <div className="flex justify-center items-center gap-x-2 sm:gap-x-6">
               <div
@@ -116,7 +110,7 @@ const NavBar = () => {
             </div>
           </div>
         </div>
-      
+        </div>
 
       <Drawer isOpen={mobileOpen} setIsOpen={setMobileOpen}>
         {NavElement.map((e) => (

@@ -25,7 +25,7 @@ const HomeHeader = () => {
         lazyLoad={true}
         dots={false}
         speed={500}
-        className="h-[80vh] w-full"
+        className="h-[80vh] w-full "
         nextArrow={<SampleNextArrow/>}
         prevArrow={<SamplePrevArrow/>}
         >

@@ -6,6 +6,8 @@ export const apiSlice = createApi({
   tagTypes: [
     "Carousel",
     "brand-active",
+    "category-active",
+    "texture-active",
   ],
   endpoints: (builder) => ({}),
 });

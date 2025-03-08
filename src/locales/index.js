@@ -96,8 +96,15 @@ i18n.use(initReactI18next).init({
         badges: "الشارات",
         footer:
           "هذا الموقع هو مبادرة من مختبر التسريع برنامج الأمم المتحدة الإنمائي في سورية بالتعاون مع نقابة المهندسين السوريين (OSEA) مشروع بناء قدرات المهندسين في الجنهورية العربية السورية.",
-          errorMsg:"خطأ"
+          errorMsg:"خطأ",
+          contactTitle1:"نحن سعيدون بالسماع",
+          contactTitle2:"منك",
+          contactdisc1:"تواصل معنا واخبرنا رأيك واقتراحاتك",
+          contactdisc2:"اقتراحاتك",
+          ContactButton:"تواصل معنا",
         },
+        
+        
     },
     en: {
       translation: {
@@ -189,7 +196,13 @@ i18n.use(initReactI18next).init({
         badges: "Badges",
         footer:
           "This website is an initiative of the UNDP Syria Accelerator Lab in collaboration with the Syrian Engineers Association (OSEA).",
-        errorMsg:"Error"
+        errorMsg:"Error",
+        contactTitle1:"We Are Happy To hear",
+        contactTitle2:"From You",
+        contactdisc1:"Contact us and tell us your opinion and suggestions",
+        contactdisc2:"",
+        ContactButton:"Contact Us"
+
         },
     },
   },
