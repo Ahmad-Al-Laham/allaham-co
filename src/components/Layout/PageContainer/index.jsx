@@ -40,7 +40,7 @@ const PageLayout = ({ children }) => {
         </div>
       )} */}
 
-      <div className="flex flex-col justify-center items-center relative bg-white text-white font-light text-tiny">
+      <div className="flex flex-col justify-center items-center relative bg-white text-black font-light text-tiny">
         <NavBar />
         <MessageBox />
         {/* <Modal /> */}

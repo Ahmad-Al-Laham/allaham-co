@@ -9,7 +9,7 @@ export default {
         bigger: "48px",
         big: "40px",
         med: "32px",
-        small: "20px",
+        small: "25px",
         smaller: "16px",
         tiny: "12px",
       },
