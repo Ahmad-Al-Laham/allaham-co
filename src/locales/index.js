@@ -102,6 +102,7 @@ i18n.use(initReactI18next).init({
           contactdisc1:"تواصل معنا واخبرنا رأيك واقتراحاتك",
           contactdisc2:"اقتراحاتك",
           ContactButton:"تواصل معنا",
+          noProductsMsg: "No Products available yet"
         },
         
         
@@ -201,8 +202,8 @@ i18n.use(initReactI18next).init({
         contactTitle2:"From You",
         contactdisc1:"Contact us and tell us your opinion and suggestions",
         contactdisc2:"",
-        ContactButton:"Contact Us"
-
+        ContactButton:"Contact Us",
+        noProductsMsg:"لا يوجد منتجات بعد"
         },
     },
   },

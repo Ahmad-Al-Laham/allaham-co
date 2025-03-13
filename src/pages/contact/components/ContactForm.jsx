@@ -67,7 +67,7 @@ const ContactForm = () => {
             Contact us and tell us your opinion and suggestions
           </div>
         </div>
-        <div className="col-span-2 flex flex-col justify-center p-0.5 bg-gradiantBorder rounded-md">
+        <div className="col-span-2  flex flex-col justify-center p-0.5 bg-gradiantBorder rounded-md">
           <div className=" rounded-md w-full p-10 space-y-3">
             <div className="flex gap-x-2 rounded">
               <CustomInput
@@ -77,6 +77,7 @@ const ContactForm = () => {
                 onChange={handleChange}
                 value={values.fullName}
                 error={errors?.fullName}
+                containerStyle={"rounded"}
               />
 
             </div>
@@ -88,7 +89,7 @@ const ContactForm = () => {
                 onChange={handleChange}
                 value={values.email}
                 error={errors?.email}
-               
+                containerStyle={"rounded"}
               />
 
             </div>
@@ -101,7 +102,7 @@ const ContactForm = () => {
               textArea
               textAreaRows={5}
               error={errors?.message}
-              
+              containerStyle={"rounded"}
             />
             <Button
               bgColor={"!bg-primary"}

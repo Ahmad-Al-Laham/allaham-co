@@ -3,14 +3,14 @@ import { API_BASE_URL } from "../../../constants";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import Loader from "../../../components/UI/Loader";
-import { useGetActiveTexturesQuery } from '../../../redux/textures/textureSlice';
+import { useGetActiveTextureQuery } from '../../../redux/textures/textureSlice';
 
 
 
 
 
 const Textures = () => {
-    const{data , isSucces , isLoading , isFetching , isError} = useGetActiveTexturesQuery();
+    const{data , isSucces , isLoading , isFetching , isError} = useGetActiveTextureQuery();
     const navigate = useNavigate()
     const {i18n , t} = useTranslation()
   return isLoading || isFetching ? (

@@ -25,7 +25,7 @@ export const texturesApiSlice = apiSlice.injectEndpoints({
         const loaded = responseData.texture;
         initialState.count = loaded.length;
         initialState.normalData = loaded;
-        return texturesApiSlice.setAll(initialState, loaded);
+        return texturesAdapter.setAll(initialState, loaded);
       },
       providesTags: (result, error, arg) => [
         { type: "textures", id: "LIST" },
@@ -35,5 +35,5 @@ export const texturesApiSlice = apiSlice.injectEndpoints({
   }),
 });
 
-export const { useGetActiveTexturesQuery, useLazyGetActiveTexturesQuery } =
+export const { useGetActiveTextureQuery, useLazyGetActiveTextureQuery } =
 texturesApiSlice;

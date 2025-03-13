@@ -8,6 +8,7 @@ export const apiSlice = createApi({
     "brand-active",
     "category-active",
     "texture-active",
+    "product-active",
   ],
   endpoints: (builder) => ({}),
 });

@@ -11,7 +11,11 @@ export const brandsApiSlice = apiSlice.injectEndpoints({
   endpoints: (builder) => ({
     getActiveBrands: builder.query({
       query: (args) => ({
-        url: `/brand-active`,
+        url: `/${
+          args?.searchTerm ? `brand/search/${args.searchTerm}` : "brand-active"
+        }?page=${args?.page ? args.page : ""}&limit=${
+          args?.limit ? args.limit : ""
+        } `,
         method:"GET",
       }),
       transformResponse: (responseData) => {
