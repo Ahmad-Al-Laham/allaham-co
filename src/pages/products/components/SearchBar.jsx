@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import { MdSearch } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
 
-const SearchBar = (value) => {
+const SearchBar = (value , page) => {
   const { i18n, t } = useTranslation();
   const [searchTerm, setSearchTerm] = useState("");
   const [open, setOpen] = useState(value);

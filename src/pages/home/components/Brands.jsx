@@ -63,7 +63,7 @@ const Brands = () => {
             },
           },
         ]}
-      >
+      ><div>
         {data.ids.map((item, index) => {
           return (
             <div
@@ -79,8 +79,10 @@ const Brands = () => {
 
               </div>
             </div>
+
           );
         })}
+        </div>
       </Slider>
     )
   );

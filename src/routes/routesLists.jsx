@@ -1,5 +1,7 @@
 import { lazy } from "react";
 import ProductsPage from "../pages/products/index.jsx";
+import TexturesPage from "../pages/textures/index.jsx";
+import Brands from "../pages/brands/Brands.jsx";
 export const publicRoutes = [
   { path: "/", element: lazy(() => import("../pages/home/index.jsx")) },
   {
@@ -25,6 +27,22 @@ export const publicRoutes = [
   {
     path: "/brands",
     element: lazy(() => import("../pages/brands/Brands.jsx")),
+  },
+  {
+    path: "/textures",
+    element: lazy(() => import("../pages/textures/index.jsx")),
+  },
+  {
+    path: "/products/:search",
+    element: ProductsPage,
+  },
+  {
+    path: "/textures/:search",
+    element: TexturesPage,
+  },
+  {
+    path: "/brands/:search",
+    element: Brands,
   },
 ];
 

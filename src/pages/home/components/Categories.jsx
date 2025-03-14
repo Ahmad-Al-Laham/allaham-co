@@ -27,7 +27,7 @@ const Categories = () => {
             {data.ids.map((item , index) =>{
                 return (
                 <img
-                    src={API_BASE_URL + data.entities[item].images[0]?.url}
+                    src={API_BASE_URL + data.entities[item].image.url}
                     className="!h-full !w-full object-center object-cover"
                   />)
             })}

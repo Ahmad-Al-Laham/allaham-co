@@ -10,7 +10,7 @@ const HomePage = () => {
       <HomeHeader />
       <Brands/>
       <Categories/>
-      {/* <Textures/> */}
+      <Textures/>
       <Contact/>
     </div>
   );

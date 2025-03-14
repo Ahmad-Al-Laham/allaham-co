@@ -67,6 +67,7 @@ i18n.use(initReactI18next).init({
         details: "التفاصيل",
         SearchProduct: "البحث عن منتج",
         SimilarProducts: "منتجات مشابهة",
+        search:"ابحث",
         callUs: "اتصل بنا",
         trainees: "المتدربين",
         trainings: "التدريبات",
@@ -102,7 +103,10 @@ i18n.use(initReactI18next).init({
           contactdisc1:"تواصل معنا واخبرنا رأيك واقتراحاتك",
           contactdisc2:"اقتراحاتك",
           ContactButton:"تواصل معنا",
-          noProductsMsg: "No Products available yet"
+          noProductsMsg: "No Products available yet",
+          profile1:"اللحام هي شركة سورية تعمل على إنتاج الأسطح والحلول المبتكرة لصناعة الأثاث والتصميم الداخلي",
+          profile2:"نعتمد أجمل التصاميم ونختار أفضل الخامات لتجربة رائعة وعملية وطويلة الأمد",
+          profile3:"يتميز بمقاومة عالية للبقع، مما يجعله مناسبًا جدًا لمثل هذه التطبيقات، كما أنه سهل التنظيف.",
         },
         
         
@@ -167,6 +171,7 @@ i18n.use(initReactI18next).init({
         collection: "Collection",
         details: "Details",
         SearchProduct: "Search For A Product",
+        search:"ٍSearch",
         SimilarProducts: "Similar Products",
         callUs: "Call Us",
         trainees: "Trainees",
@@ -203,7 +208,10 @@ i18n.use(initReactI18next).init({
         contactdisc1:"Contact us and tell us your opinion and suggestions",
         contactdisc2:"",
         ContactButton:"Contact Us",
-        noProductsMsg:"لا يوجد منتجات بعد"
+        noProductsMsg:"لا يوجد منتجات بعد",
+        profile1:"Allaham is an Syrian company producing innovative surfaces and solutions for the furniture and interior design industries.",
+        profile2:"We adopt the most beautiful designs and choose the best materials for a wonderful, practical and long-lasting experience",
+        profile3:"It is highly resistant to stains, which is very appropiate for applications such as this, as well as easy to clean.",
         },
     },
   },

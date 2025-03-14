@@ -10,8 +10,8 @@ const ContactMap = () => {
   const { i18n, t } = useTranslation();
 
   return (
-    <div>
-      <div className="text-black pl-[5%] pt-[5%] text-huge font-bold pl-[10%] pb-[40px]">Get In Touch</div>
+    <div  dir={i18n.language == "en" ? "ltr" : "rtl"}>
+      <div className="text-black pl-[5%] pt-[5%] text-huge font-bold pl-[10%] pb-[40px]">{t("getInTouch")}</div>
       <div className="rounded">
         <div className="flex justify-center rounded px-[10%]">
           <div className="rounded w-[70%]">
@@ -29,7 +29,7 @@ const ContactMap = () => {
             ></iframe>
           </div>
           <div className="bg-primary bg-gradient-to-t from-black/60 p-[20px] text-small md:text-med rounded-r text-white w-[100%] md:w-[30%] ">
-            <div className="font-medium">Contact Info</div>
+            <div className="font-medium">{t("ContactInfo")}</div>
             <div>
               <div className="space-y-3 h-full pt-[20px]">
                 <div className=" flex justify-start items-center gap-x-3"></div>
@@ -64,7 +64,7 @@ const ContactMap = () => {
               <div>
                 <div className="space-y-3 h-full items-end justify-end mt-[50%]">
                   <p className="px-2 py-4 cursor-pointer text-smaller md:text-small font-medium text-white uppercase">
-                    Follow Us
+                    {t("FollowUs")}
                   </p>
                   <div className="grid grid-cols-2 lg:grid-cols-4">
                     <div className="  p-2 text-small lg:text-med cursor-pointer">

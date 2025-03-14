@@ -1,12 +1,12 @@
 export const NavElement = [
-  { name: "Home", link: "/" },
-  {name: "profile", link: "/profile"},
-  {name: "Products" , link:"/products"},
+  { name: "home", link: "/" },
+  {name: "Profile", link: "/profile"},
+  {name: "products" , link:"/products"},
   // { name: "contact", link: "/contact" },
 ];
 
 export const NavElement2 = [
   {name: "Brands" ,link: "/brands"},
-  {name: "textures", link: "/textures"},
-  {name : "Contact" , link: "/Contact"},
+  {name: "Textures", link: "/textures"},
+  {name : "ContactUs" , link: "/Contact"},
 ]

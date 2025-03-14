@@ -53,7 +53,7 @@ const ContactForm = () => {
     setValues(defaultFormState);
   }
   return (
-    <div className="flex justify-center my-[10%] ">
+    <div className="flex justify-center my-[10%] "  dir={i18n.language == "en" ? "ltr" : "rtl"}>
       <div
         className=" h-[80vh]  bg-cover bg-no-repeat w-[80%] rounded-md rounded-t-md "
         style={{
@@ -62,9 +62,9 @@ const ContactForm = () => {
       >
         <div className="bg-gradient-to-b from-primary/50 via-primary/80 ">
         <div className="p-[5%]">
-          <div className="text-big text-white ">Send A Message</div>
+          <div className="text-big text-white ">{t("sendMessage")}</div>
           <div className="text-small text-white ">
-            Contact us and tell us your opinion and suggestions
+            {t("contactSlogan")}
           </div>
         </div>
         <div className="col-span-2  flex flex-col justify-center p-0.5 bg-gradiantBorder rounded-md">

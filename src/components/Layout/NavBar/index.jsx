@@ -1,29 +1,29 @@
-import React, { useState, useEffect ,useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import Drawer from "./Drawer";
 import LinkElement from "./LinkElement";
 import { MdDehaze } from "react-icons/md";
 import { handleScroll } from "../../../helpers/scroll";
 import { NavElement } from "../../../data/navData";
-import Logo from "../../../assets/logos/logo.svg"
+import Logo from "../../../assets/logos/logo.svg";
 import { NavElement2 } from "../../../data/navData";
-import {SearchBar} from './SearchBar.jsx'
+import { SearchBar } from "./SearchBar.jsx";
 import { useNavigate } from "react-router-dom";
-import Language from './Language.jsx'
+import Language from "./Language.jsx";
 import { MdSearch } from "react-icons/md";
 const NavBar = () => {
   const { t, i18n } = useTranslation();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [header, setHeader] = useState(false);
   const [selectedLink, setSelectedLink] = useState("home");
-  const [searchBarOpen , setSearchBarOpen] = useState(false);
-      const[searchTerm , setSearchTerm] = useState("");
-      const [open,setOpen] = useState(false);
+  const [searchBarOpen, setSearchBarOpen] = useState(false);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [open, setOpen] = useState(false);
   const navigate = useNavigate();
 
-
   const listenScrollEvent = (event) => {
-    if (document.documentElement.scrollTop < 40) { //not understand
+    if (document.documentElement.scrollTop < 40) {
+      //not understand
       setHeader(false);
     } else if (document.documentElement.scrollTop > 40) {
       setHeader(true);
@@ -37,22 +37,22 @@ const NavBar = () => {
   }, []);
   return (
     <>
-      <div className="h-[110px] w-full absolute">
+      <div className="h-[110px] w-full absolute ">
         <div
-          className={`fixed max-w-[1920px] w-full top-2.5 left-1/2 -translate-x-1/2 z-50 flex justify-center items-center gap-x-2 sm:gap-x-6 transition-all duration-300 px-[3%]`}
+          dir={i18n.language == "en" ? "ltr" : "rtl"}
+          className={`fixed max-w-[1920px] w-full top-0 left-1/2 -translate-x-1/2 z-50 flex justify-between items-center gap-x-2 sm:gap-x-6 transition-all duration-300 px-[3%] ${
+            header
+              ? " bg-black/40 shadow-2xl backdrop-blur-md"
+              : "shadow-none bg-transparent"
+          }`}
         >
+          <div>
+            <SearchBar />
+          </div>
+          
 
-
-          <div
-            dir={i18n.language == "en" ? "ltr" : "rtl"}
-            className={`transition-all duration-500 p-4 2xl:p-5 flex items-center justify-between md:justify-center rounded-2xl shadow-md text-white w-full h-[75px] 2xl:h-[90px] gap-x-12 ${
-              header
-                ? " bg-black/40 shadow-2xl backdrop-blur-md"
-                : "shadow-none bg-transparent"
-            }`}
-          >
             <div
-              className="flex justify-center items-center gap-x-8 2xl:gap-x-12 max-md:hidden !text-white"
+              className="flex justify-center items-center gap-x-8 2xl:gap-x-12 max-md:hidden  !text-white"
               dir={i18n.language == "en" ? "ltr" : "rtl"}
             >
               {NavElement.map((e, index) => {
@@ -63,8 +63,7 @@ const NavBar = () => {
                     link={e.link}
                     selectedLink={selectedLink}
                     header={header}
-                    styled={"max-lg:hidden text-white"}
-                    
+                    styled={"max-lg:hidden text-white "}
                   />
                 );
               })}
@@ -72,13 +71,13 @@ const NavBar = () => {
             <img
               src={Logo}
               alt="Logo BIM"
-              className="h-full w-[200px] cursor-pointer translate-y-1 "
+              className="h-[100px] w-[100px] cursor-pointer translate-y-1 "
               onClick={() => {
                 navigate("/");
               }}
             />
             <div
-              className="flex justify-center items-center gap-x-8 2xl:gap-x-12 max-md:hidden !text-white"
+              className="flex justify-center items-center gap-x-8 2xl:gap-x-12  max-md:hidden !text-white"
               dir={i18n.language == "en" ? "ltr" : "rtl"}
             >
               {NavElement2.map((e, index) => {
@@ -89,16 +88,11 @@ const NavBar = () => {
                     link={e.link}
                     selectedLink={selectedLink}
                     header={header}
-                    styled={"max-lg:hidden text-white"}
-                    
+                    styled={"max-lg:hidden text-white "}
                   />
                 );
               })}
             </div>
-
-              <Language/>
-          
-            
 
             <div className="flex justify-center items-center gap-x-2 sm:gap-x-6">
               <div
@@ -108,9 +102,12 @@ const NavBar = () => {
                 <MdDehaze size={24} />
               </div>
             </div>
-          </div>
+          
+          <div>
+            <Language />
+            </div>
         </div>
-        </div>
+      </div>
 
       <Drawer isOpen={mobileOpen} setIsOpen={setMobileOpen}>
         {NavElement.map((e) => (
@@ -141,7 +138,6 @@ const NavBar = () => {
             }}
           />
         ))}
-
       </Drawer>
     </>
   );

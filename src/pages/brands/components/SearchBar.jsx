@@ -4,15 +4,13 @@ import { useTranslation } from "react-i18next";
 import { MdSearch } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
 
-
-export const SearchBar = () => {
-    const {i18n , t} = useTranslation();
-    const[searchTerm , setSearchTerm] = useState("");
-    const [open,setOpen] = useState(false);
-    const navigate = useNavigate();
-
+const SearchBar = (value , page) => {
+  const { i18n, t } = useTranslation();
+  const [searchTerm, setSearchTerm] = useState("");
+  const [open, setOpen] = useState(value);
+  const navigate = useNavigate();
   return (
-     <div className="w-full flex justify-center items-center mt-4">
+    <div className="w-full flex justify-center items-center mt-4">
       <div
         // style={{
         //   background:
@@ -25,7 +23,7 @@ export const SearchBar = () => {
         <div
           className={`h-14 ${
             open
-              ? "w-[150px] sm:w-[320px] md:w-[275px] bg-secondary/80 px-4"
+              ? "w-[270px] sm:w-[320px] md:w-[900px] shadow-2xl bg-black/40  backdrop-blur-lg px-4"
               : "w-14 bg-transparent px-1"
           } rounded-full transition-all duration-700 flex justify-between items-center `}
         >
@@ -48,7 +46,7 @@ export const SearchBar = () => {
               if (searchTerm.length == 0) setOpen(!open);
               else {
                 sessionStorage.setItem("searchUrl", searchTerm);
-                navigate(`/products/${searchTerm}`);
+                navigate(`/brands/${searchTerm}`);
               }
             }}
           />
@@ -56,5 +54,6 @@ export const SearchBar = () => {
       </div>
     </div>
   );
-}
+};
 
+export default SearchBar;

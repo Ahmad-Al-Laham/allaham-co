@@ -18,8 +18,7 @@ const ProfileBody = () => {
         <div className=" md:pt-[7%]    items-center">
           <p className="text-fourth text-huge ">01</p>
           <p className="text-black flex-wrap text-small text-center">
-            Allaham is an Syrian company producing innovative surfaces and
-            solutions for the furniture and interior design industries.
+          {t("profile1")}
           </p>
         </div>
       </div>
@@ -27,8 +26,7 @@ const ProfileBody = () => {
         <div className=" sm:pt-[7%] pb-[8%] order-2 md:order-1 items-center">
           <p className="text-fourth text-huge ">02</p>
           <p className="text-black flex-wrap text-small  text-center">
-            We adopt the most beautiful designs and choose the best materials
-            for a wonderful, practical and long-lasting experience
+          {t("profile2")}
           </p>
         </div>
         <div className="pt-[2%] order-1 md:order-2">
@@ -42,8 +40,7 @@ const ProfileBody = () => {
         <div className=" items-center md:pt-[7%] pb-[10%] ">
           <p className="text-fourth text-huge ">03</p>
           <p className="text-black  text-small text-center">
-            It is highly resistant to stains, which is very appropiate for
-            applications such as this, as well as easy to clean.
+          {t("profile3")}
           </p>
         </div>
       </div>
