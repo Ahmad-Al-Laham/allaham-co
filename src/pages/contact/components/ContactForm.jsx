@@ -104,6 +104,7 @@ const ContactForm = () => {
               error={errors?.message}
               containerStyle={"rounded"}
             />
+            <div className="">
             <Button
               bgColor={"!bg-primary"}
               text={isLoading ? t("sending") : t("send")}
@@ -128,9 +129,11 @@ const ContactForm = () => {
                     } `}
                     size={25}
                   />
+                  
                 )
               }
             />
+            </div>
           </div>
         </div>
       </div>

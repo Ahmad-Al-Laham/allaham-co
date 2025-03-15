@@ -39,9 +39,13 @@ export const SearchBar = () => {
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
           />
-
+          <div className={`${
+            !open
+              ? " bg-black/40 shadow-2xl backdrop-blur-md rounded-full p-[8px]"
+              : "shadow-none bg-transparent"
+          }`}>
           <MdSearch
-            className={`h-full w-auto rounded-full text-med ${
+            className={`h-100px w-auto rounded-full text-med  ${
               open ? "text-primary" : "text-white"
             } cursor-pointer`}
             onClick={() => {
@@ -52,6 +56,7 @@ export const SearchBar = () => {
               }
             }}
           />
+          </div>
         </div>
       </div>
     </div>

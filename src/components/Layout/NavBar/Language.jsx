@@ -36,7 +36,7 @@ export default function Dropdown() {
           className="p-0 m-0 relative text-third text-center cursor-pointer"
           onClick={() => setOpen(!open)}
         >
-          <MdLanguage size={24} />
+          <MdLanguage size={30} />
         </div>
 
         <div

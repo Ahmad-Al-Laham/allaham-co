@@ -104,7 +104,7 @@ const Filter = (modal) => {
         icon={<MdExpandMore className="text-smaller" />}
         select
         readOnly
-        containerStyle={"rounded-full !shadow-xl !drop-shadow-xl "}
+        containerStyle={"rounded-full !shadow-xl  !drop-shadow-xl "}
         
       />
         <CustomInput

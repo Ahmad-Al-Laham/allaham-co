@@ -6,7 +6,8 @@ export const NavElement = [
 ];
 
 export const NavElement2 = [
+  {name : "Categories" , link: "/Categories"},
   {name: "Brands" ,link: "/brands"},
   {name: "Textures", link: "/textures"},
-  {name : "ContactUs" , link: "/Contact"},
+  
 ]

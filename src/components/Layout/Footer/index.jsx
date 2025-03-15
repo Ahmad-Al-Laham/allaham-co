@@ -8,7 +8,9 @@ import { FaInstagram } from "react-icons/fa";
 import Location from '../../../assets/icons/Location.svg'
 import { FaWhatsapp } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 const Footer = () => {
+  const {i18n , t} = useTranslation();
   const [selectedLink, setSelectedLink] = useState("Home");
 
   return (
@@ -31,7 +33,7 @@ const Footer = () => {
         
         <div className="space-y-3 h-full">
           <p className="px-2 py-4 text-small font-medium text-white uppercase">
-            Info :
+            {t("ContactInfo")}
           </p>
 
           <div className=" flex justify-start items-center gap-x-3">
@@ -54,7 +56,7 @@ const Footer = () => {
         </div>
         <div className="space-y-3 h-full">
           <p className="px-2 py-4 cursor-pointer text-small font-medium text-white uppercase">
-          Follow Us
+            {t("FollowUs")}
           </p>
           <div className="flex justify-start items-center gap-x-3">
 

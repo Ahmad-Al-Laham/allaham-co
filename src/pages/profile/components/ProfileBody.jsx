@@ -17,7 +17,7 @@ const ProfileBody = () => {
         </div>
         <div className=" md:pt-[7%]    items-center">
           <p className="text-fourth text-huge ">01</p>
-          <p className="text-black flex-wrap text-small text-center">
+          <p className="text-black flex-wrap text-smaller sm:text-small text-center">
           {t("profile1")}
           </p>
         </div>
@@ -25,7 +25,7 @@ const ProfileBody = () => {
       <div className="grid md:grid-cols-2">
         <div className=" sm:pt-[7%] pb-[8%] order-2 md:order-1 items-center">
           <p className="text-fourth text-huge ">02</p>
-          <p className="text-black flex-wrap text-small  text-center">
+          <p className="text-black flex-wrap text-smaller sm:text-small   text-center">
           {t("profile2")}
           </p>
         </div>
@@ -39,7 +39,7 @@ const ProfileBody = () => {
         </div>
         <div className=" items-center md:pt-[7%] pb-[10%] ">
           <p className="text-fourth text-huge ">03</p>
-          <p className="text-black  text-small text-center">
+          <p className="text-black text-smaller  sm:text-small text-center">
           {t("profile3")}
           </p>
         </div>

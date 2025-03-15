@@ -8,8 +8,13 @@ import GalleryModal from "../../UI/GalleryModal";
 import MessageBox from "../../UI/Message";
 import FilterModal from "../../UI/FilterModal/FilterModal";
 import { useLocation } from "react-router-dom";
+import { MdContactPage } from "react-icons/md";
+import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 
 const PageLayout = ({ children }) => {
+  const navigate = useNavigate()
+  const {i18n , t} = useTranslation()
   const { width } = useWindowDimensions();
   const [w, setW] = useState(width);
   const location = useLocation();
@@ -48,6 +53,21 @@ const PageLayout = ({ children }) => {
         <FilterModal />
         <div className="min-h-screen w-full max-w-[1920px]">{children}</div>
         <Footer />
+        {location.pathname !== "/contact" && (
+          <div className="fixed group flex justify-center items-center bottom-3 md:bottom-5 right-3 md:right-5 z-40">
+            <div className="transition-all duration-500 font-semibold text-white bg-black/40 shadow-2xl drop-shadow-2xl backdrop-blur-[200px] px-3 py-1 rounded-full translate-x-full opacity-0 group-hover:translate-x-0 group-hover:opacity-100 cursor-pointer z-10">
+              {t("ContactUs")}
+            </div>
+            <div
+              className="group flex items-center justify-center bg-primary text-white p-3 m-3 rounded-full cursor-pointer z-20 shadow-2xl drop-shadow-2xl"
+              onClick={() => {
+                navigate("/Contact");
+              }}
+            >
+              <MdContactPage className="text-[30px] md:text-[40px]" />
+            </div>
+          </div>
+        )}
       </div>
     </>
   );

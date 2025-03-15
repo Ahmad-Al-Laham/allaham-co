@@ -23,7 +23,7 @@ const SearchBar = (value , page) => {
         <div
           className={`h-14 ${
             open
-              ? "w-[270px] sm:w-[320px] md:w-[900px] shadow-2xl bg-black/40  backdrop-blur-lg px-4"
+              ? "w-[270px] sm:w-[320px] md:w-[700px] lg:w-[900px] shadow-2xl bg-black/40  backdrop-blur-lg px-4"
               : "w-14 bg-transparent px-1"
           } rounded-full transition-all duration-700 flex justify-between items-center `}
         >
@@ -46,7 +46,7 @@ const SearchBar = (value , page) => {
               if (searchTerm.length == 0) setOpen(!open);
               else {
                 sessionStorage.setItem("searchUrl", searchTerm);
-                navigate(`/brands/${searchTerm}`);
+                navigate(`/products/${searchTerm}`);
               }
             }}
           />

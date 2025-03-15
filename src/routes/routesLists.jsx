@@ -33,6 +33,10 @@ export const publicRoutes = [
     element: lazy(() => import("../pages/textures/index.jsx")),
   },
   {
+    path: "/Categories",
+    element: lazy(() => import("../pages/categories/index.jsx")),
+  },
+  {
     path: "/products/:search",
     element: ProductsPage,
   },

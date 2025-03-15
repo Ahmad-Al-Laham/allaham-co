@@ -138,7 +138,7 @@ const CustomInput = ({
                   return (
                     <p
                       key={index}
-                      className="text-tiny hover:bg-secondary/50 rounded-md p-2 transition-all duration-300"
+                      className="text-tiny text-black hover:bg-third/50 rounded-md p-2 transition-all duration-300"
                       onClick={() => {
                         useStateOption
                           ? setState(item)

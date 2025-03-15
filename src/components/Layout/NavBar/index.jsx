@@ -40,7 +40,7 @@ const NavBar = () => {
       <div className="h-[110px] w-full absolute ">
         <div
           dir={i18n.language == "en" ? "ltr" : "rtl"}
-          className={`fixed max-w-[1920px] w-full top-0 left-1/2 -translate-x-1/2 z-50 flex justify-between items-center gap-x-2 sm:gap-x-6 transition-all duration-300 px-[3%] ${
+          className={`fixed max-w-[1920px] w-full top-0 left-1/2 -translate-x-1/2 z-50 flex justify-between items-center gap-x-2 sm:gap-x-6 px-[5%] transition-all duration-300 px-[3%] ${
             header
               ? " bg-black/40 shadow-2xl backdrop-blur-md"
               : "shadow-none bg-transparent"
@@ -50,9 +50,9 @@ const NavBar = () => {
             <SearchBar />
           </div>
           
-
+            <div className="flex justify-between gap-14">
             <div
-              className="flex justify-center items-center gap-x-8 2xl:gap-x-12 max-md:hidden  !text-white"
+              className={`flex justify-center items-center gap-x-8 2xl:gap-x-12 max-md:hidden ${i18n.language == "en" ? "pl-[50px] ": "pr-[50px]"} !text-white`}
               dir={i18n.language == "en" ? "ltr" : "rtl"}
             >
               {NavElement.map((e, index) => {
@@ -71,7 +71,7 @@ const NavBar = () => {
             <img
               src={Logo}
               alt="Logo BIM"
-              className="h-[100px] w-[100px] cursor-pointer translate-y-1 "
+              className="h-[80px] w-[100px] cursor-pointer translate-y-1 "
               onClick={() => {
                 navigate("/");
               }}
@@ -102,8 +102,8 @@ const NavBar = () => {
                 <MdDehaze size={24} />
               </div>
             </div>
-          
-          <div>
+            </div>
+          <div className={`${i18n.language == "en" ? "pl-[10px]" : "pr-[10px]"}`}>
             <Language />
             </div>
         </div>

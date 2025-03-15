@@ -13,8 +13,8 @@ const ContactMap = () => {
     <div  dir={i18n.language == "en" ? "ltr" : "rtl"}>
       <div className="text-black pl-[5%] pt-[5%] text-huge font-bold pl-[10%] pb-[40px]">{t("getInTouch")}</div>
       <div className="rounded">
-        <div className="flex justify-center rounded px-[10%]">
-          <div className="rounded w-[70%]">
+        <div className="flex flex-col md:flex-row justify-center rounded px-[10%]">
+          <div className="rounded w-[100%] md:w-[70%] pb-[10%]  md:pb-[0px]">
             <iframe
               width="100%"
               height="700"
