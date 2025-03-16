@@ -4,14 +4,14 @@ import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import Loader from "../../../components/UI/Loader";
 import Slider from "react-slick";
-import LazyImage from '../../../components/UI/LazyImage'
-
+import { API_BASE_URL } from "../../../constants";
 const Brands = () => {
-  const { data, isSucces, isFetching, isLoading, isError } =
+  const { data, isSuccess, isFetching, isLoading, isError } =
     useGetActiveBrandsQuery();
+
   const navigate = useNavigate();
   const { i18n, t } = useTranslation();
-  const [currentSlide, setCurrentSlide] = useState(0);
+  // const [currentSlide, setCurrentSlide] = useState(0);
   return isLoading || isFetching ? (
     <div className="py-44 flex justify-center items-center relative">
       <Loader />
@@ -21,22 +21,24 @@ const Brands = () => {
       <p className="text-big font-semibold">{t("errorMsg")}</p>
     </div>
   ) : (
-    isSucces && (
+    isSuccess && (
       <Slider
         slidesToScroll={1}
         accessibility
         slidesToShow={1}
-        touchMove={false}
+        touchMove={true}
         autoplay={true}
         speed={700}
+        arrows={false}
+        dots={true}
         // speed={10000}
         // autoplaySpeed={0}
         // cssEase="linear"
         lazyLoad="progressive"
         // centerMode
         // centerPadding="60px"
-        className="h-full w-full mt-10"
-        beforeChange={(prev, next) => setCurrentSlide(next)}
+        className="h-fll w-full mt-10"
+        // beforeChange={(prev, next) => setCurrentSlide(next)}
         responsive={[
           {
             breakpoint: 2000,
@@ -63,18 +65,25 @@ const Brands = () => {
             },
           },
         ]}
-      ><div>
+      >
         {data.ids.map((item, index) => {
           return (
             <div
               key={index}
-              className="w-full !flex !justify-center !items-center"
+              className="w-[100%] !flex !justify-center h-full rounded-xl !items-center"
             >
-              <div className="bg-white text-black w-full h-full rounded-sm overflow-hidden"> 
+              <div className="bg-white text-black rounded-sm overflow-hidden !h-full !w-[200px]"> 
                       <img
                   src={API_BASE_URL + data.entities[item].image.url}
                   alt={data.entities[item].nameEn}
-                  className="!h-full !w-full object-center object-cover"
+                  className=" !h-full rounded-full !w-[200px] "
+                  onClick={() => {
+                    sessionStorage.setItem(
+                      "productSlug",
+                      data.entities[item].id
+                    );
+                    navigate(`/products/${data.entities[item].nameEn}`); //:${data.entities[item].products[0].brandId}
+                  }}
                   />
 
               </div>
@@ -82,7 +91,7 @@ const Brands = () => {
 
           );
         })}
-        </div>
+
       </Slider>
     )
   );

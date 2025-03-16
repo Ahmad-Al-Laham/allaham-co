@@ -10,7 +10,8 @@ import { useGetActiveTextureQuery } from '../../../redux/textures/textureSlice';
 
 
 const Textures = () => {
-    const{data , isSucces , isLoading , isFetching , isError} = useGetActiveTextureQuery();
+    const [itemsPerPage] = useState(6);
+    const{data , isSuccess , isLoading , isFetching , isError} = useGetActiveTextureQuery();
     const navigate = useNavigate()
     const {i18n , t} = useTranslation()
   return isLoading || isFetching ? (
@@ -22,12 +23,12 @@ const Textures = () => {
     <p className="text-big font-semibold">{t("errorMsg")}</p>
   </div>
   ):(
-    isSucces &&(
+    isSuccess &&(
         <div>
             {data.ids.map((item , index) =>{
                 return (
                 <img
-                    src={API_BASE_URL + data.entities[item].images[0]?.url}
+                    src={API_BASE_URL + data.entities[item].image.url}
                     className="!h-full !w-full object-center object-cover"
                   />)
             })}

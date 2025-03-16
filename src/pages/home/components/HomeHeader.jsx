@@ -1,4 +1,4 @@
-import React from "react";
+  import React from "react";
 import Slider from "react-slick";
 import { useGetCarouselContentQuery } from "../../../redux/header/headerSlice";
 import { API_BASE_URL } from "../../../constants";
