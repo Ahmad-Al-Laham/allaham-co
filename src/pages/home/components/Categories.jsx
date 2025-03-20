@@ -41,7 +41,7 @@ const Categories = () => {
                         "productSlug",
                         data.entities[item].id
                       );
-                      navigate(`/products/${data.entities[item].nameEn}`);
+                      navigate(`/products/${data.entities[item].id}/all/all/all`);
                     }}>
                     <div
                       dir={i18n.language == "en" ? "ltr" : "rtl"}
