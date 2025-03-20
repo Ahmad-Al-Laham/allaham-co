@@ -82,7 +82,7 @@ const Brands = () => {
                       "productSlug",
                       data.entities[item].id
                     );
-                    navigate(`/products/${data.entities[item].nameEn}`); //:${data.entities[item].products[0].brandId}
+                    navigate(`/products/all/all/all/${data.entities[item].id}`); //:${data.entities[item].products[0].brandId}
                   }}
                   />
 
