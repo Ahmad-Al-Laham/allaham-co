@@ -70,13 +70,13 @@ const Brands = () => {
           return (
             <div
               key={index}
-              className="w-[100%] !flex !justify-center h-full rounded-xl !items-center"
+              className="w-[100%] !flex !justify-center h-full  rounded-xl !items-center"
             >
-              <div className="bg-white text-black rounded-sm overflow-hidden !h-full !w-[200px]"> 
+              <div className="bg-white text-black rounded-sm overflow-hidden !h-[190px] !w-[200px]"> 
                       <img
                   src={API_BASE_URL + data.entities[item].image.url}
                   alt={data.entities[item].nameEn}
-                  className=" !h-full rounded-full !w-[200px] "
+                  className=" !h-[190px] rounded-full shadow-lg pb-[3px] cursor-pointer !w-[200px] "
                   onClick={() => {
                     sessionStorage.setItem(
                       "productSlug",

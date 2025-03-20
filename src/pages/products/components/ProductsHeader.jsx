@@ -12,7 +12,7 @@ const ProductsHeader = () => {
                   backgroundImage: `url(${header})`,
                 }}
               >
-        <div className="text-huge grid grid-cols-1 pt-[18%] bg-gradient-to-b from-black/60 pb-[22%]   ">
+        <div className="text-huge grid grid-cols-1 pt-[18%] bg-gradient-to-b from-black/60 pb-[15%]   ">
           <p className="flex justify-center text-white items-center font-bold ">
            {t("products")}
           </p>

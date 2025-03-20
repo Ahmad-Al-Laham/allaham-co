@@ -107,6 +107,10 @@ i18n.use(initReactI18next).init({
           profile1:"اللحام هي شركة سورية تعمل على إنتاج الأسطح والحلول المبتكرة لصناعة الأثاث والتصميم الداخلي",
           profile2:"نعتمد أجمل التصاميم ونختار أفضل الخامات لتجربة رائعة وعملية وطويلة الأمد",
           profile3:"يتميز بمقاومة عالية للبقع، مما يجعله مناسبًا جدًا لمثل هذه التطبيقات، كما أنه سهل التنظيف.",
+          infoTitle:"اللحام للتجارة",
+          infoDescription:"نحن شغوفون باختيار أجمل الديكورات لمساحاتكم العملية، والتي تعكس ذوقكم واحتياجاتكم الفريدة. نلتزم بتوفير مواد وتشطيبات عالية الجودة تدوم لسنوات طويلة.",
+          visionTitle:"اكتشف جميع التصاميم",
+          visionDesciption:"قم بجولة في بعض أعمالنا التي تم تصميمها وتصنيعها على يد نخبة من المصممين والحرفيين",
         },
         
         
@@ -212,6 +216,10 @@ i18n.use(initReactI18next).init({
         profile1:"Allaham is an Syrian company producing innovative surfaces and solutions for the furniture and interior design industries.",
         profile2:"We adopt the most beautiful designs and choose the best materials for a wonderful, practical and long-lasting experience",
         profile3:"It is highly resistant to stains, which is very appropiate for applications such as this, as well as easy to clean.",
+        infoTitle:"Allaham Trading co",
+        infoDescription:"we are passionate about selecting the beautiful decors for your functional spaces hat reflect your unique styles and needs. We are committed to providing a high-quality materials and finishes that will last for years to come.",
+        visionTitle:"Our Vision",
+        visionDesciption:"We envision homes that are not only beautiful but also functional and sustainable.That's why we are committed to using sustainable materials and practices whenever possible.",
         },
     },
   },

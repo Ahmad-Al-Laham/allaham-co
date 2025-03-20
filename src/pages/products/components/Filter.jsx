@@ -104,7 +104,7 @@ const Filter = (modal) => {
         icon={<MdExpandMore className="text-smaller" />}
         select
         readOnly
-        containerStyle={"rounded-full !shadow-xl  !drop-shadow-xl "}
+        containerStyle={"rounded-full !shadow-sm !drop-shadow-xl z-10 "}
         
       />
         <CustomInput
@@ -124,13 +124,13 @@ const Filter = (modal) => {
         icon={<MdExpandMore className="text-smaller" />}
         select
         readOnly
-        containerStyle={"rounded-full !shadow-xl !drop-shadow-xl"}
+        containerStyle={"rounded-full !shadow-sm !drop-shadow-xl z-10 "}
       />
         <CustomInput
         value={
           i18n.language === "en"
-            ? Brands.entities[form.categoryId]?.nameEn ?? ""
-            : Brands.entities[form.categoryId]?.nameAr ?? ""
+            ? Brands.entities[form.brandId]?.nameEn ?? ""
+            : Brands.entities[form.brandId]?.nameAr ?? ""
         }
         name={"brandId"}
         inputType="text"
@@ -143,14 +143,14 @@ const Filter = (modal) => {
         icon={<MdExpandMore className="text-smaller" />}
         select
         readOnly
-        containerStyle={"rounded-full !shadow-xl !drop-shadow-xl"}
+        containerStyle={"rounded-full !shadow-sm !drop-shadow-xl z-10 "}
         
       />
         <CustomInput
         value={
           i18n.language === "en"
-            ? textures.entities[form.categoryId]?.nameEn ?? ""
-            : textures.entities[form.categoryId]?.nameAr ?? ""
+            ? textures.entities[form.textureId]?.nameEn ?? ""
+            : textures.entities[form.textureId]?.nameAr ?? ""
         }
         name={"textureId"}
         inputType="text"
@@ -163,7 +163,7 @@ const Filter = (modal) => {
         icon={<MdExpandMore className="text-smaller" />}
         select
         readOnly
-        containerStyle={"rounded-full !shadow-xl !drop-shadow-xl bg-secondary"}
+        containerStyle={"rounded-full !shadow-sm !drop-shadow-xl bg-secondary z-10 "}
         
       />
       <div className="flex ">
@@ -171,7 +171,7 @@ const Filter = (modal) => {
          <Button
           bgColor={"!bg-primary"}
           text={t("Filter")}
-          customStyle={`font-regular group !shadow-xl !drop-shadow-xl`}
+          customStyle={`font-regular group !shadow-sm !drop-shadow-xl  `}
           textColor={"text-white text-[23px]"}
           borderRadius={"9999px"}
           w={"260px"}

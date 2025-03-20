@@ -21,17 +21,18 @@ const HomeHeader = () => {
         slidesToScroll={1}
         slidesToShow={1}
         touchMove
+        autoplay={true}
         arrows
         lazyLoad={true}
         dots={false}
         speed={500}
-        className="h-[80vh] w-full "
+        className="h-[100vh] w-full "
         nextArrow={<SampleNextArrow/>}
         prevArrow={<SamplePrevArrow/>}
         >
             {data.ids.map((item , index) =>{
               return (
-                <div key={index} className="h-[80vh] relative">
+                <div key={index} className="h-[100vh] relative">
                   <img
                   src={API_BASE_URL + data.entities[item].image.url}
                   className="w-full h-full object-cover object-top"
@@ -39,12 +40,12 @@ const HomeHeader = () => {
                   <div className="bg-gradient-to-b from-black/60 h-full w-full absolute top-0 left-0">
                   <div className="bg-black/30 absolute h-full w-full top-0 left-0">
                   <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/3 text-center text-white max-sm:w-full max-sm:p-10">
-                        <p className="text-bigger lg:text-huge text-center font-semibold">
+                        <p className="text-med md:text-bigger lg:text-huge text-center font-semibold">
                             {i18n.language == "en"
                             ? data.entities[item].titleEn
                             :data.entities[item].titleAr}
                         </p>
-                        <p className="text-bigger lg:text-huge text-center font-semibold">
+                        <p className="text-med md:text-bigger lg:text-huge text-center font-semibold">
                             {i18n.language == "en"
                             ? data.entities[item].discriptionEn
                             :data.entities[item].discriptionAr}

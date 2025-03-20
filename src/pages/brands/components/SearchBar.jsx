@@ -23,17 +23,17 @@ const SearchBar = (value , page) => {
         <div
           className={`h-14 ${
             open
-              ? "w-[270px] sm:w-[320px] md:w-[700px] lg:w-[900px] shadow-2xl bg-black/40  backdrop-blur-lg px-4"
+              ? "w-[270px] sm:w-[320px] md:w-[700px] lg:w-[900px] shadow-2xl bg-third/40  backdrop-blur-lg px-4"
               : "w-14 bg-transparent px-1"
           } rounded-full transition-all duration-700 flex justify-between items-center `}
         >
           <input
             className={` ${
               open ? "w-full" : "w-0"
-            } transition-all duration-700  h-full outline-none rounded-full bg-transparent text-primary placeholder:text-primary placeholder:font-medium font-medium text-small ${
+            } transition-all duration-700  h-full outline-none rounded-full bg-transparent text-black placeholder:text-black   text-small ${
               i18n.language != "en" && "text-right"
             }`}
-            placeholder={t("search")}
+            placeholder={t("SearchProduct")}
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
           />

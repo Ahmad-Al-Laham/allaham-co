@@ -40,7 +40,7 @@ const ProductDetails = ({ data }) => {
             <table className=" border border-2 border-black text-smaller sm:text-med">
               <tbody>
                 <tr className="border border-2  border-black ">
-                  <td className="border border-2  border-black px-[20px]">
+                  <td className="border border-2  border-black font-bold px-[20px]">
                     Type:
                   </td>
                   <td className="border border-2  border-black px-[20px]">
@@ -48,7 +48,7 @@ const ProductDetails = ({ data }) => {
                   </td>
                 </tr>
                 <tr className="border border-2  border-black ">
-                  <td className="border border-2  border-black px-[20px]">
+                  <td className="border border-2  border-black font-bold px-[20px]">
                     Category:
                   </td>
                   <td className="border border-2  border-black px-[20px]">
@@ -58,7 +58,7 @@ const ProductDetails = ({ data }) => {
                   </td>
                 </tr>
                 <tr className="border border-2  border-black ">
-                  <td className="border border-2  border-black px-[20px]">
+                  <td className="border border-2  border-black font-bold px-[20px]">
                     Texture:
                   </td>
                   <td className="border border-2  border-black px-[20px]">
@@ -68,7 +68,7 @@ const ProductDetails = ({ data }) => {
                   </td>
                 </tr>
                 <tr className="border border-2  border-black ">
-                  <td className="border border-2  border-black px-[20px]">
+                  <td className="border border-2  border-black font-bold px-[20px]">
                     Brand:
                   </td>
                   <td className="border border-2  border-black px-[20px]">
@@ -94,7 +94,7 @@ const ProductDetails = ({ data }) => {
         <div>
           <p className="text-big p-[30px] pt-[50px]  ">Demo Images:</p>
         </div>
-        <div className="flex w-full gap-5 pb-[5%]">
+        <div className="flex w-full gap-5 pb-[5%] cursor-pointer">
           {data.images.map((item, index) => {
             return (
               <div className="flex" key={index}>

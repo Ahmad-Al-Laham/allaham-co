@@ -36,7 +36,7 @@ export const productsApiSlice = apiSlice.injectEndpoints({
             },
             providesTags:(result , error  , arg) => [
                 {type: "Products" , id: "LIST"},
-                ...result.ids.map((id) =>({type: "Produts" , id})),
+                ...result.ids.map((id) =>({type: "Products" , id})),
             ],
         }),
         getProductById: builder.query({

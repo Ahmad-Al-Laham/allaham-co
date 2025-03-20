@@ -3,6 +3,7 @@ import contact from '../../../assets/images/home/contact.png'
 import { FaArrowCircleRight } from 'react-icons/fa'
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
+import Arrow from "../../../assets/icons/Arrow.svg";
 
 const Contact = () => {
     const navigate = useNavigate();
@@ -30,11 +31,14 @@ const Contact = () => {
          
         </p>
       </div>
-      <div className='px-[5%] mt-[10px]'>
-        <a href='/contact' className='bg-primary p-3 text-white  text-sm sm:text-med bg-gradient-to-l from-black/60'>
-          {t("ContactButton")}
-        </a>
-      </div>
+     <div className="text-white cursor-pointer  flex justify-start items-start  pl-[5%]    text-small right-10 " onClick={() => {
+                 navigate(`/contact`)
+               }}>
+               <p className="bg-primary group flex px-[20px]">
+                {t("ContactUs")}
+                 <img src={Arrow} alt="" className="pl-[10px] group-hover:translate-x-[40%] transition-all duration-500 " />
+               </p>
+             </div>
     </div>
   </div>
 </div>

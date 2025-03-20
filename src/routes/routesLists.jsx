@@ -40,14 +40,7 @@ export const publicRoutes = [
     path: "/products/:search",
     element: ProductsPage,
   },
-  {
-    path: "/textures/:search",
-    element: TexturesPage,
-  },
-  {
-    path: "/brands/:search",
-    element: Brands,
-  },
+
 ];
 
 export const protectedRoutes = [];

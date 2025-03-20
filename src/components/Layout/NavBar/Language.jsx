@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { useTranslation } from "react-i18next";
+import lang from '../../../assets/icons/lang.svg'
 
 import {
   MdLanguage,
@@ -21,32 +22,29 @@ export default function Dropdown() {
       setOpen(false);
     }
   };
-  useEffect(() => {
-    document.addEventListener("click", handleClickOutside, true);
-    return () => {
-      document.removeEventListener("click", handleClickOutside, true);
-    };
-  }, []);
+
 
   return (
     <div className="rounded-md">
       <div className="relative">
         <div
           style={{ WebkitTapHighlightColor: "transparent" }}
-          className="p-0 m-0 relative text-third text-center cursor-pointer"
+          className="p-0 m-0 relative text-black text-center cursor-pointer"
           onClick={() => setOpen(!open)}
         >
-          <MdLanguage size={30} />
+          <img src={lang} alt="" onClick={() => {
+            setOpen(!open)
+          }}/>
         </div>
 
         <div
           ref={ref}
-          onClick={() => setOpen(false)}
+          onClick={() => setOpen(!open)}
           className={`${open ? "scale-100" : "scale-0"} absolute z-10 mt-4 ${
             i18n.language == "en"
               ? "origin-top-right  right-0"
               : "origin-top-left left-0"
-          } top-7 bg-third/80 rounded-lg shadow-2xl transition-all duration-300 p-4 space-y-2 text-white font-medium text-smaller w-40`}
+          } top-7 bg-black/80 rounded-lg shadow-2xl transition-all duration-300 p-4 space-y-2 text-third font-medium text-smaller w-40`}
         >
           <div
             className="flex justify-start items-center cursor-pointer"

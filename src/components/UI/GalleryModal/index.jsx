@@ -28,7 +28,7 @@ export default function Modal() {
     <div
       className={`${
         open ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"
-      } transition-all duration-300 justify-center items-center flex fixed inset-0 z-40 outline-none focus:outline-none w-full bg-third/90 `}
+      } transition-all duration-300 justify-center items-center flex fixed inset-0 z-40 outline-none focus:outline-none w-full bg-black/60 `}
     >
       <div
         ref={ref}
@@ -40,9 +40,9 @@ export default function Modal() {
           }}
           className={`cursor-pointer font-semibold self-center text-white hover:scale-125 hover:rotate-180 absolute ${
             i18n.language == "en" ? "right-5" : "left-5"
-          }  top-2 sm:max-md:top-8 md:top-3 transition-all duration-300 z-30 backdrop-blur-sm rounded-full shadow-2xl drop-shadow-2xl`}
+          }  top-2 sm:max-md:top-8 md:top-3 transition-all duration-300 z-30 backdrop-blur-sm rounded-full  drop-shadow-2xl`}
         >
-          <MdClose size={50} className="text-white" />
+          <MdClose size={50} className="text-primary" />
         </div>
         {data?.data}
       </div>

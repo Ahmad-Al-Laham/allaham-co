@@ -1,5 +1,5 @@
 import React from "react";
-import { useState , useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useGetActiveTextureQuery } from "../../../redux/textures/textureSlice";
 import Loader from "../../../components/UI/Loader";
 import { useTranslation } from "react-i18next";
@@ -8,19 +8,18 @@ import { useNavigate } from "react-router-dom";
 import Pagination from "../../../components/Forms/Pagination";
 import { useParams } from "react-router-dom";
 const TextureBody = () => {
-    const {
-      search,
-      texture
-    } = useParams();
+  const { search, texture } = useParams();
   const { i18n, t } = useTranslation();
   const navigate = useNavigate();
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage] = useState(12);
   const { data, isSuccess, isLoading, isFetching, isError } =
-    useGetActiveTextureQuery();
+    useGetActiveTextureQuery({
+      searchTerm: search,
+      page: currentPage,
+   
+    });
 
-
-    
   return isLoading || isFetching ? (
     <div className="py-44 flex justify-center items-center relative">
       <Loader />
@@ -38,43 +37,32 @@ const TextureBody = () => {
       <div className="flex flex-col justify-center mt-10">
         <div
           dir={i18n.language == "en" ? "ltr" : "rtl"}
-          className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-8 justify-center items-center place-items-center my-6 px-[7%] sm:px-[5%]"
-        >
+          className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-8 justify-center items-center place-items-center my-6 px-[7%] sm:px-[5%]">
           {data.ids.map((item, index) => {
             return (
-              <div key={index} className="cursor-pointer">
+              <div
+                key={index}
+                className="cursor-pointer"
+                onClick={() => {
+                  sessionStorage.setItem("productSlug", data.entities[item].id);
+                  navigate(`/products/all/all/${data.entities[item].id}/all`);
+                }}>
                 <div
-                  onClick={() => {
-                    sessionStorage.setItem(
-                      "productSlug",
-                      data.entities[item].id
-                    );
-                    navigate(`/product/${data.entities[item].id}`);
-                  }}
                   className={
                     "flex justify-center p-1 rounded-md flex-col items-center bg-white relative h-[370px] min-w-[270px] sm:min-w-[370px]  w-full"
-                  }
-                >
+                  }>
                   <div className="bg-white w-full h-full   p-[10px]  overflow-hidden">
                     <img
                       divStyle={"!h-full !w-full"}
                       alt={data.entities[item].nameEn}
                       src={API_BASE_URL + data.entities[item].image.url}
                       className="!h-full !w-full object-center object-cover"
-                      onClick={() => {
-                        sessionStorage.setItem(
-                          "productSlug",
-                          data.entities[item].id
-                        );
-                        navigate(`/products`);
-                      }}
                     />
                   </div>
                 </div>
                 <div
                   dir={i18n.language == "en" ? "ltr" : "rtl"}
-                  className="px-2  flex justify-between  items-center"
-                >
+                  className="px-2  flex justify-between  items-center">
                   <p className="text-small font-bold">
                     {i18n.language == "en"
                       ? data.entities[item].nameEn

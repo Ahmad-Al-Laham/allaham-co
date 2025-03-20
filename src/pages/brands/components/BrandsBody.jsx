@@ -32,12 +32,12 @@ const BrandsBody = () => {
         {data.ids.map((item, index) => {
           return (
             <div key={index} className="cursor-pointer p-[10%] sm:p-[5%]">
-              <div className="bg-white w-[200px] h-[200px] rounded-full  overflow-hidden">
+              <div className="bg-white w-[200px] h-[190px] rounded-full  overflow-hidden">
                 <img
                   divStyle={"!h-full !w-full"}
                   alt={data.entities[item].nameEn}
                   src={API_BASE_URL + data.entities[item].image.url}
-                  className="!h-[200px] !w-[200px]  object-center object-cover"
+                  className=" h-[190px] w-[200px]  object-center object-cover"
                   onClick={() => {
                     sessionStorage.setItem(
                       "productSlug",
@@ -52,7 +52,7 @@ const BrandsBody = () => {
                 dir={i18n.language == "en" ? "ltr" : "rtl"}
                 className="px-2  flex justify-between  items-center"
               >
-                <p className="text-small font-bold pl-[40px] ">
+                <p className="text-small font-bold pl-[18%] text-center ">
                   {i18n.language == "en"
                     ? data.entities[item].nameEn
                     : data.entities[item].nameAr}

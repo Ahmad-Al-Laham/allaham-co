@@ -115,7 +115,7 @@ const CustomInput = ({
             ref={ref} // ?not understant 
             className={`
                ${selectStatus ? "scale-100" : "scale-0"}
-             z-40 transition-all duration-300 origin-top absolute left-0 top-14 rounded-2xl shadow-2xl drop-shadow-2xl bg-secondary backdrop-blur-[21px] text-secondary w-full p-2`}
+             z-40 transition-all duration-300 origin-top absolute left-0 top-14 max-h-[300px] overflow-x-hidden overflow-y-auto rounded-2xl shadow-2xl drop-shadow-2xl bg-secondary backdrop-blur-[21px] text-secondary w-full p-2`}
           >
             {options
               ? options.map((item, index) => {
@@ -154,7 +154,7 @@ const CustomInput = ({
                   return (
                     <p
                       key={index}
-                      className="text-tiny hover:bg-third/50 text-black rounded-md p-2 z-10 transition-all duration-300"
+                      className="text-tiny hover:bg-third/50 text-black rounded-md p-2 z-10 transition-all duration-300 "
                       onClick={() => {
                         useStateOption
                           ? setState(item)
