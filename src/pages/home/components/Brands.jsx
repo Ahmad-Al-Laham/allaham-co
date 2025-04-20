@@ -70,28 +70,20 @@ const Brands = () => {
           return (
             <div
               key={index}
-              className="w-[100%] !flex !justify-center h-full  rounded-xl !items-center"
+              className="w-full !flex !justify-center rounded-xl !items-center !h-[250px]"
             >
-              <div className="bg-white text-black rounded-sm overflow-hidden !h-[190px] !w-[200px]"> 
-                      <img
-                  src={API_BASE_URL + data.entities[item].image.url}
-                  alt={data.entities[item].nameEn}
-                  className=" !h-[190px] rounded-full shadow-lg pb-[3px] cursor-pointer !w-[200px] "
-                  onClick={() => {
-                    sessionStorage.setItem(
-                      "productSlug",
-                      data.entities[item].id
-                    );
-                    navigate(`/products/all/all/all/${data.entities[item].id}`); //:${data.entities[item].products[0].brandId}
-                  }}
-                  />
-
-              </div>
+              <img
+                src={API_BASE_URL + data.entities[item].image.url}
+                alt={data.entities[item].nameEn}
+                className="!h-[200px] rounded-full shadow-lg pb-[3px] cursor-pointer !w-[200px] "
+                onClick={() => {
+                  sessionStorage.setItem("productSlug", data.entities[item].id);
+                  navigate(`/products/all/all/all/${data.entities[item].id}`); //:${data.entities[item].products[0].brandId}
+                }}
+              />
             </div>
-
           );
         })}
-
       </Slider>
     )
   );
