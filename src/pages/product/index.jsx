@@ -18,7 +18,7 @@ const ProductsPage = () => {
     if (id) getProductById({ id });
   }, [id]);
   return isLoading || isFetching ? (
-    <div className="h-screen flex justify-center items-center relative">
+    <div className="h-screen flex justify-center items-center relative font-Bai">
       <Loader />
     </div>
   ) : isError ? (

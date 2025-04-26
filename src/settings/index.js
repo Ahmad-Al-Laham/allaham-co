@@ -6,6 +6,7 @@ export const systemSettings = {
       secondary: "#79797C",
       third: "#F6F6F6",
       fourth: "#79797C",
+      fifth:"#6b0000",
       black: "#222222",
       white: "#FFFFFF",
     },

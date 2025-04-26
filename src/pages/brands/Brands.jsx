@@ -3,7 +3,7 @@ import BrandsHeader from './components/BrandsHeader'
 import BrandsBody from './components/BrandsBody'
 const Brands = () => {
   return (
-    <div>
+    <div className='font-Bai'>
       <BrandsHeader/>
       <BrandsBody/>
     </div>

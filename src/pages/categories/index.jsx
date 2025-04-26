@@ -3,7 +3,7 @@ import CategoriesHeader from './components/CategoriesHeader'
 import CategoriesBody from './components/CategoriesBody'
 const CategoriesPage = () => {
   return (
-    <div>
+    <div className='font-Bai'>
       <CategoriesHeader/>
       <CategoriesBody/>
     </div>

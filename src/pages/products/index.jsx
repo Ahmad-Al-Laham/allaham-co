@@ -4,7 +4,7 @@ import Filter from "./components/Filter";
 import ProductsList from "./components/ProductsList";
 const ProductsPage = () => {
   return (
-    <div>
+    <div className="font-Bai">
       <ProductsHeader />
       <Filter />
       <ProductsList/>   

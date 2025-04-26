@@ -16,16 +16,16 @@ const ProfileBody = () => {
           <img src={first} alt="" />
         </div>
         <div className=" md:pt-[21%]    items-center">
-          <p className="text-fourth text-huge font-extrabold pl-[15px] ">01</p>
-          <p className="text-black flex-wrap text-smaller sm:text-small text-center">
+          <p className="text-fourth/20 text-[70px] font-extrabold pl-[5%] ">01</p>
+          <p className="text-black flex-wrap text-smaller sm:text-small pl-[5%]">
           {t("profile1")}
           </p>
         </div>
       </div>
       <div className="grid md:grid-cols-2">
         <div className=" sm:pt-[20%] pb-[8%] order-2 md:order-1 items-center">
-          <p className="text-fourth text-huge font-extrabold pl-[15px]">02</p>
-          <p className="text-black flex-wrap text-smaller sm:text-small   text-center">
+          <p className="text-fourth/20 text-[70px] font-extrabold pl-[5%]">02</p>
+          <p className="text-black flex-wrap text-smaller sm:text-small   pl-[5%]">
           {t("profile2")}
           </p>
         </div>
@@ -38,8 +38,8 @@ const ProfileBody = () => {
           <img src={third} alt="" />
         </div>
         <div className=" items-center md:pt-[20%]  ">
-          <p className="text-fourth text-huge font-extrabold pl-[15px]">03</p>
-          <p className="text-black text-smaller  sm:text-small text-center">
+          <p className="text-fourth/20 text-[70px] font-extrabold pl-[5%]">03</p>
+          <p className="text-black text-smaller  sm:text-small pl-[5%]">
           {t("profile3")}
           </p>
         </div>

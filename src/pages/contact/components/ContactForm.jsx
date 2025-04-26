@@ -55,15 +55,15 @@ const ContactForm = () => {
   return (
     <div className="flex justify-center my-[10%] "  dir={i18n.language == "en" ? "ltr" : "rtl"}>
       <div
-        className=" h-[80vh]  bg-cover bg-no-repeat w-[80%] rounded-md rounded-t-md "
+        className=" h-[120vh]  bg-cover bg-no-repeat w-[80%] rounded-md rounded-t-md "
         style={{
           backgroundImage: `url(${contact})`,
         }}
       >
-        <div className="bg-gradient-to-b from-primary/50 via-primary/80 ">
-        <div className="p-[5%]">
-          <div className="text-big text-white ">{t("sendMessage")}</div>
-          <div className="text-small text-white ">
+        <div className="bg-gradient-to-b from-primary/90 ">
+        <div className="p-[5%] ">
+          <div className="lg:text-[70px] med:text-huge sm:text-bigger text-big  font-bold text-white ">{t("sendMessage")}</div>
+          <div className="lg:text-bigger med:text-big sm:text-med text-small font-bold text-white ">
             {t("contactSlogan")}
           </div>
         </div>
@@ -77,7 +77,7 @@ const ContactForm = () => {
                 onChange={handleChange}
                 value={values.fullName}
                 error={errors?.fullName}
-                containerStyle={"rounded"}
+                containerStyle={"rounded-2xl bg-white/60 text-small text-white"}
               />
 
             </div>
@@ -89,7 +89,19 @@ const ContactForm = () => {
                 onChange={handleChange}
                 value={values.email}
                 error={errors?.email}
-                containerStyle={"rounded"}
+                containerStyle={"rounded-2xl bg-white/60 text-small text-white"}
+              />
+
+            </div>
+            <div className="flex flex-row gap-x-2 mt-2">
+              <CustomInput
+                placeholder={t("phoneNumber")}
+                type={"email"}
+                name={"email"}
+                onChange={handleChange}
+                value={values.email}
+                error={errors?.email}
+                containerStyle={"rounded-2xl bg-white/60 text-small text-white"}
               />
 
             </div>
@@ -102,7 +114,7 @@ const ContactForm = () => {
               textArea
               textAreaRows={5}
               error={errors?.message}
-              containerStyle={"rounded"}
+              containerStyle={"rounded-2xl bg-white/60 text-small text-white"}
             />
             <div className="">
             <Button

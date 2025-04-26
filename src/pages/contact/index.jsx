@@ -5,7 +5,7 @@ import ErrorBoundary from './components/ErrorBoundary'
 import ContactForm from './components/ContactForm'
 const index = () => {
   return (
-    <div>
+    <div className='font-Bai'>
       <ContactHeader/>
       <ContactMap/>
       <ContactForm/>

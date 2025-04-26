@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import lang from '../../../assets/icons/lang.svg'
+import lang from "../../../assets/icons/lang.svg";
 
 import {
   MdLanguage,
@@ -23,18 +23,32 @@ export default function Dropdown() {
     }
   };
 
-
   return (
     <div className="rounded-md">
       <div className="relative">
         <div
           style={{ WebkitTapHighlightColor: "transparent" }}
           className="p-0 m-0 relative text-black text-center cursor-pointer"
-          onClick={() => setOpen(!open)}
-        >
-          <img src={lang} alt="" onClick={() => {
-            setOpen(!open)
-          }}/>
+          onClick={() => setOpen(!open)}>
+          {i18n.language == "en" ? (
+            <div className="relative h-[50px] w-[50px] text-white font-semibold text-smaller">
+              <div className="h-[30px] w-[30px] bg-fourth/70  absolute top-0 left-0  flex justify-center items-center border border-solid border-black">
+                ع
+              </div>
+              <div className="h-[30px] w-[30px] bg-fourth/70  absolute  bottom-0 right-0 flex justify-center items-center border border-solid border-black">
+                EN
+              </div>
+            </div>
+          ) : (
+            <div className="relative h-[50px] w-[50px] text-white font-semibold text-smaller ">
+              <div className="h-[30px] w-[30px] bg-fourth/70  absolute  top-0 left-0 flex justify-center items-center border border-solid border-black">
+                EN
+              </div>
+              <div className="h-[30px] w-[30px] bg-fourth/70  absolute bottom-0 right-0 flex justify-center items-center border border-solid border-black">
+                ع
+              </div>
+            </div>
+          )}
         </div>
 
         <div
@@ -44,14 +58,12 @@ export default function Dropdown() {
             i18n.language == "en"
               ? "origin-top-right  right-0"
               : "origin-top-left left-0"
-          } top-7 bg-black/80 rounded-lg shadow-2xl transition-all duration-300 p-4 space-y-2 text-third font-medium text-smaller w-40`}
-        >
+          } top-7 bg-black/80 rounded-lg shadow-2xl transition-all duration-300 p-4 space-y-2 text-third font-medium text-smaller w-40`}>
           <div
             className="flex justify-start items-center cursor-pointer"
             onClick={() => {
               changeLanguage("en");
-            }}
-          >
+            }}>
             <div className="px-2">
               {i18n.language === "en" ? (
                 <MdRadioButtonChecked size={24} />
@@ -66,8 +78,7 @@ export default function Dropdown() {
             className="flex justify-start items-center cursor-pointer"
             onClick={() => {
               changeLanguage("ar");
-            }}
-          >
+            }}>
             <div className="px-2">
               {i18n.language === "ar" ? (
                 <MdRadioButtonChecked size={24} />

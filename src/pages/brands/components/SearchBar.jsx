@@ -16,21 +16,11 @@ const SearchBar = (value , page) => {
         //   background:
         //     "linear-gradient(180deg, #0092AD 0%, #094C6C 24.48%, #F7B507 43.23%, #E98005 65.1%, #B34B95 81.25%, #672971 99.48%",
         // }}
-        className={`p-[2px] rounded-lg flex justify-center items-center ${
-          open && "shadow-lg drop-shadow-lg"
-        }  transition-all duration-700`}
+        className={`p-[2px] rounded-full flex justify-center bg-white/20  backdrop-blur-sm  items-center w-[100%] `}
       >
-        <div
-          className={`h-14 ${
-            open
-              ? "w-[270px] sm:w-[320px] md:w-[700px] lg:w-[900px] shadow-2xl bg-third/40  backdrop-blur-lg px-4"
-              : "w-14 bg-transparent px-1"
-          } rounded-full transition-all duration-700 flex justify-between items-center `}
-        >
+
           <input
-            className={` ${
-              open ? "w-full" : "w-0"
-            } transition-all duration-700  h-full outline-none rounded-full bg-transparent text-black placeholder:text-black   text-small ${
+            className={` md:w-[700px] sm:w-[350px]  w-[230px]  h-[40px] outline-none rounded-full bg-transparent text-black "w-full" placeholder:text-black   text-small ${
               i18n.language != "en" && "text-right"
             }`}
             placeholder={t("SearchProduct")}
@@ -42,15 +32,8 @@ const SearchBar = (value , page) => {
             className={`h-full w-auto rounded-full text-med ${
               open ? "text-primary" : "text-white"
             } cursor-pointer`}
-            onClick={() => {
-              if (searchTerm.length == 0) setOpen(!open);
-              else {
-                sessionStorage.setItem("searchUrl", searchTerm);
-                navigate(`/products/${searchTerm}`);
-              }
-            }}
           />
-        </div>
+   
       </div>
     </div>
   );

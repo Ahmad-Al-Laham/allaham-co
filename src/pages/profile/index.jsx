@@ -3,7 +3,7 @@ import ProfileHeader from './components/ProfileHeader'
 import ProfileBody from './components/ProfileBody'
 const index = () => {
   return (
-    <div>
+    <div className='font-Bai'>
       <ProfileHeader/>
       <ProfileBody/>
     </div>

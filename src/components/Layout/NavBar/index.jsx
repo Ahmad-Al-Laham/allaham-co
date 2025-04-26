@@ -38,10 +38,10 @@ const NavBar = () => {
   }, []);
   return (
     <>
-      <div className="h-[110px] w-full absolute ">
+      <div className="h-[110px] w-full absolute font-Bai">
         <div
           dir={i18n.language == "en" ? "ltr" : "rtl"}
-          className={`fixed max-w-[1920px] w-full top-0 left-1/2 -translate-x-1/2 z-50 flex justify-between items-center gap-x-2 sm:gap-x-6 px-[5%] transition-all duration-300 h-[70px] ${
+          className={`fixed max-w-[1920px] w-full top-0 left-1/2 -translate-x-1/2 z-50 flex justify-between items-center gap-x-2 sm:gap-x-6 px-[5%] transition-all duration-300 h-[80px] ${
             header
               ? " bg-black/40 shadow-2xl backdrop-blur-md"
               : "shadow-none bg-transparent"
@@ -82,7 +82,7 @@ const NavBar = () => {
               }}
             />
           </div> */}
-          <div className="bg-black/50 h-[50px] w-[50px] rounded-full flex justify-center items-center relative">
+          <div className="bg-black/50 h-[60px] w-[60px] rounded-full flex justify-center items-center relative">
             <MdSearch
               className={`h-[40px] w-[40px] rounded-full text-med  text-white cursor-pointer`}
               onClick={() => {
@@ -132,7 +132,7 @@ const NavBar = () => {
             </div>
             <div
               className={`relative transition-all duration-500 ${
-                open ? "w-[250px]" : "w-[70px]"
+                open ? "w-[250px]" : "w-[70px] h-[70px]"
               }`}
             >
               <img
@@ -169,7 +169,7 @@ const NavBar = () => {
                     }`}
                   >
                     <MdSearch
-                      className={`h-[40px] w-[40PX] rounded-full text-med  text-primary cursor-pointer`}
+                      className={`h-[20px] w-[20px] sm:h-[40px] sm:w-[40PX] rounded-full text-med  text-primary cursor-pointer`}
                       onClick={() => {
                         if (searchTerm.length == 0) setOpen(!open);
                         else {

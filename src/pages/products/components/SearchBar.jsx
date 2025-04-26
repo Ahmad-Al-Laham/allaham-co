@@ -11,19 +11,11 @@ const SearchBar = (value , page) => {
   const navigate = useNavigate();
   return (
     <div className="w-full flex justify-center items-center mt-4">
-      <div
-        // style={{
-        //   background:
-        //     "linear-gradient(180deg, #0092AD 0%, #094C6C 24.48%, #F7B507 43.23%, #E98005 65.1%, #B34B95 81.25%, #672971 99.48%",
-        // }}
-        className={`p-[2px] rounded-lg flex justify-center items-center ${
-          open && "shadow-lg drop-shadow-lg"
-        }  transition-all duration-700`}
-      >
+
         <div
           className={`h-14 ${
             open
-              ? "w-[270px] sm:w-[320px] md:w-[900px] shadow-2xl bg-third/40   backdrop-blur-sm px-4"
+              ? "w-[270px] sm:w-[320px] md:w-[900px] shadow-2xl bg-third/20  backdrop-blur-sm px-4"
               : "w-14 bg-transparent px-1"
           } rounded-full transition-all duration-700 flex justify-between items-center `}
         >
@@ -42,16 +34,10 @@ const SearchBar = (value , page) => {
             className={`h-full w-auto rounded-full text-med ${
               open ? "text-primary" : "text-white"
             } cursor-pointer`}
-            onClick={() => {
-              if (searchTerm.length == 0) setOpen(!open);
-              else {
-                sessionStorage.setItem("searchUrl", searchTerm);
-                navigate(`/products/${searchTerm}`);
-              }
-            }}
+            
           />
         </div>
-      </div>
+
     </div>
   );
 };

@@ -14,7 +14,7 @@ const Footer = () => {
   const [selectedLink, setSelectedLink] = useState("Home");
 
   return (
-    <div className="max-w-[1920px] w-full relative space-y-10 flex flex-col justify-start items-center ">
+    <div className="max-w-[1920px] w-full relative space-y-10 flex flex-col justify-start items-center font-Bai">
       <div className=" w-full  gap-x-5 bg-primary text-white bg-gradient-to-r from-black/60 h-[95%] grid md:grid-cols-2 lg:grid-cols-3 place-items-center p-[2%] gap-12">
         <div className="space-y-10 h-full pt-2 md:max-lg:col-span-2">
           <img src={Logo} alt="LOGO" className="w-full h-[100px]" />

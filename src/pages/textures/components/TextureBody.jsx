@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { useGetActiveTextureQuery } from "../../../redux/textures/textureSlice";
+import { useLazyGetActiveTextureQuery } from "../../../redux/textures/textureSlice";
 import Loader from "../../../components/UI/Loader";
 import { useTranslation } from "react-i18next";
 import { API_BASE_URL } from "../../../constants";
@@ -12,13 +12,25 @@ const TextureBody = () => {
   const { i18n, t } = useTranslation();
   const navigate = useNavigate();
   const [currentPage, setCurrentPage] = useState(1);
-  const [itemsPerPage] = useState(12);
-  const { data, isSuccess, isLoading, isFetching, isError } =
-    useGetActiveTextureQuery({
-      searchTerm: search,
-      page: currentPage,
-   
-    });
+  const [itemsPerPage] = useState(27);
+  const [
+    getActiveTexture,
+    { data, isSuccess, isLoading, isFetching, isError },
+  ] = useLazyGetActiveTextureQuery();
+  useEffect(() => {
+    if (search) {
+      getActiveTexture({
+        page: currentPage,
+        limit: itemsPerPage,
+        searchTerm:search,
+      });
+    }else {
+      getActiveTexture({
+        page: currentPage,
+        limit: itemsPerPage,
+      });
+    }
+  }, [search, currentPage, itemsPerPage]);
 
   return isLoading || isFetching ? (
     <div className="py-44 flex justify-center items-center relative">
@@ -74,7 +86,7 @@ const TextureBody = () => {
           })}
         </div>
         <div className="flex justify-center items-center">
-          <Pagination
+        <Pagination
             currentPage={currentPage}
             totalCount={data.count}
             pageSize={itemsPerPage}

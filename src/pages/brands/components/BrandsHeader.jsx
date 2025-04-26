@@ -13,7 +13,7 @@ const BrandsHeader = () => {
               }}
             >
                 <div className='flex flex-col justify-center items-center pt-[18%]  bg-gradient-to-b from-black/60 pb-[22%]'>
-                    <p className='text-white text-huge font-bold' >
+                    <p className='text-white text-[70px] font-bold' >
                        {t("Brands")}
                     </p>
                     <div>

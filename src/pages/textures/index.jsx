@@ -3,7 +3,7 @@ import TexturesHeader from './components/TexturesHeader'
 import TextureBody from './components/TextureBody'
 const TexturesPage = () => {
   return (
-    <div>
+    <div className='font-Bai'>
       <TexturesHeader/>
       <TextureBody/>
     </div>

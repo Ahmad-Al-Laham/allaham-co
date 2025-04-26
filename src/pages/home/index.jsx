@@ -8,7 +8,7 @@ import Info from "./components/info";
 import Vision from "./components/Vision";
 const HomePage = () => {
   return (
-    <div>
+    <div className=" font-Bai">
       <HomeHeader />
       <Brands />
       <Info />

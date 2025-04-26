@@ -19,7 +19,7 @@ const Textures = () => {
   const { i18n, t } = useTranslation();
 
   return isLoading || isFetching ? (
-    <div className="py-44 flex justify-center items-center relative">
+    <div className="py-44 flex justify-center items-center relative ">
       <Loader />
     </div>
   ) : isError ? (
@@ -30,14 +30,14 @@ const Textures = () => {
     isSuccess && (
       <div>
         <div className="flex justify-center items-center  text-huge font-bold">
-        <h2>{t("Textures")}</h2>
+          <h2>{t("Textures")}</h2>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  px-[10%] pt-[5%] p-[3%]">
-          <div className="flex flex-col gap-5">
+          <div className="flex flex-col ">
             {data.ids.map((item, index) => {
               if (index >= 0 && index <= 1)
                 return (
-                  <div key={index} className="cursor-pointer  ">
+                  <div key={index} className="cursor-pointer pt-[4%] ">
                     <div className="bg-white w-[100%]  lg:w-[95%] h-[600px]    overflow-hidden ">
                       <div
                         className="w-[100%] lg:w-[100%] h-[600px]   bg-cover bg-no-repeat bg-center"
@@ -51,7 +51,9 @@ const Textures = () => {
                             "productSlug",
                             data.entities[item].id
                           );
-                          navigate(`/products/all/all/${data.entities[item].id}/all`);
+                          navigate(
+                            `/products/all/all/${data.entities[item].id}/all`
+                          );
                         }}>
                         <div
                           dir={i18n.language == "en" ? "ltr" : "rtl"}
@@ -71,11 +73,11 @@ const Textures = () => {
                 );
             })}
           </div>
-          <div className="flex flex-col pt-[10%] gap-5">
+          <div className="flex flex-col pt-[10%] ">
             {data.ids.map((item, index) => {
               if (index >= 2 && index <= 3)
                 return (
-                  <div key={index} className="cursor-pointer  ">
+                  <div key={index} className="cursor-pointer pt-[4%] ">
                     <div className="bg-white w-[100%]  lg:w-[95%] h-[600px]    overflow-hidden ">
                       <div
                         className="w-[100%] lg:w-[100%] h-[600px]   bg-cover bg-no-repeat bg-center"
@@ -89,7 +91,9 @@ const Textures = () => {
                             "productSlug",
                             data.entities[item].id
                           );
-                          navigate(`/products/all/all/${data.entities[item].id}/all`);
+                          navigate(
+                            `/products/all/all/${data.entities[item].id}/all`
+                          );
                         }}>
                         <div
                           dir={i18n.language == "en" ? "ltr" : "rtl"}
@@ -109,11 +113,11 @@ const Textures = () => {
                 );
             })}
           </div>
-          <div className="flex flex-col sm:hidden lg:block gap-5">
+          <div className="flex flex-col sm:hidden lg:block  ">
             {data.ids.map((item, index) => {
               if (index >= 4 && index <= 5)
                 return (
-                  <div key={index} className="cursor-pointer  ">
+                  <div key={index} className="cursor-pointer pt-[4%] ">
                     <div className="bg-white w-[100%]  lg:w-[95%] h-[600px]    overflow-hidden ">
                       <div
                         className="w-[100%] lg:w-[100%] h-[600px]   bg-cover bg-no-repeat bg-center"
@@ -127,7 +131,9 @@ const Textures = () => {
                             "productSlug",
                             data.entities[item].id
                           );
-                          navigate(`/products/all/all/${data.entities[item].id}/all`);
+                          navigate(
+                            `/products/all/all/${data.entities[item].id}/all`
+                          );
                         }}>
                         <div
                           dir={i18n.language == "en" ? "ltr" : "rtl"}
@@ -148,14 +154,26 @@ const Textures = () => {
             })}
           </div>
         </div>
-        <div className="text-white cursor-pointer  flex justify-center items-center    text-small right-10 " onClick={() => {
-            navigate(`/textures`)
-          }}>
-          <p className="bg-primary  group  flex px-[20px]">
-           {t("ViewAll")}
-            <img src={Arrow} alt="" className="pl-[10px] group-hover:translate-x-[40%] transition-all duration-500 " />
-          </p>
-        </div>
+        <div className="flex justify-center items-center pt-[3%]">
+       <div
+                   className="text-white flex justify-center group items-center gap-x-2 cursor-pointer transition-all duration-300 text-small sm:text-smaller md:text-small w-full max-w-[270px] h-[40px] -translate-y-[50px] translate-x-[12px] bg-primary"
+                   dir={i18n.language == "ar" ? "rtl" : "ltr"}
+                   onClick={() => {
+                     navigate(`/categories`);
+                   }}
+                 >
+                   <p className=" flex justify-center ">{t("ViewAll")}</p>
+                   <img
+                     src={Arrow}
+                     alt=""
+                     className={`transition-all duration-500 ${
+                       i18n.language == "ar"
+                         ? "rotate-180 group-hover:-translate-x-[50%]"
+                         : " group-hover:translate-x-[50%]"
+                     }`}
+                   />
+                 </div>
+                 </div>
       </div>
     )
   );

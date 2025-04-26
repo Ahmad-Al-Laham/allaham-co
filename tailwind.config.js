@@ -15,6 +15,7 @@ export default {
       },
 
       fontFamily: {
+        Bai:"'Bitter', serif",
         regular: "MonRegular",
         medium: "MonMedium",
         light: "MonLight",

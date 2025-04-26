@@ -11,7 +11,7 @@ const HomeHeader = () => {
   const {data , isSuccess , isLoading , isFetching } = useGetCarouselContentQuery();
 
   return isLoading || isFetching ? (
-    <div className="h-screen flex justify-center items-center relative ">
+    <div className="h-screen flex justify-center items-center relative font-Bai ">
         <Loader/>
     </div>
   ) : (

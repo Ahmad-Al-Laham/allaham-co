@@ -11,9 +11,9 @@ const ContactMap = () => {
 
   return (
     <div  dir={i18n.language == "en" ? "ltr" : "rtl"}>
-      <div className="text-black pl-[5%] pt-[5%] text-huge font-bold pl-[10%] pb-[40px]">{t("getInTouch")}</div>
+      <div className="text-black  pt-[5%] text-huge font-bold pl-[10%] pb-[40px]">{t("getInTouch")}</div>
       <div className="rounded">
-        <div className="flex flex-col md:flex-row justify-center rounded px-[10%]">
+        <div className="flex flex-col md:flex-row justify-center rounded px-[6%]">
           <div className="rounded w-[100%] md:w-[70%] pb-[10%]  md:pb-[0px]">
             <iframe
               width="100%"
@@ -28,7 +28,7 @@ const ContactMap = () => {
               referrerpolicy="no-referrer-when-downgrade"
             ></iframe>
           </div>
-          <div className="bg-primary bg-gradient-to-t from-black/60 p-[20px] text-small md:text-med rounded-r text-white w-[100%] md:w-[30%] ">
+          <div className="bg-primary/90 bg-gradient-to-t from-black/80 p-[20px] text-small md:text-med rounded-r text-white w-[100%] md:w-[30%] ">
             <div className="font-medium">{t("ContactInfo")}</div>
             <div>
               <div className="space-y-3 h-full pt-[20px]">
@@ -38,7 +38,7 @@ const ContactMap = () => {
                   <div className="  p-2 text-med">
                     <MdPhone />
                   </div>
-                  <a href="tel:949-880-1774" className="text-tiny lg:text-small">
+                  <a href="tel:949-880-1774" className="text-tiny lg:text-smaller">
                     949-880-1774
                   </a>
                 </div>
@@ -46,7 +46,7 @@ const ContactMap = () => {
                   <div className="  p-2 text-med">
                     <MdMail />
                   </div>
-                  <a href="mailto:allaham@gmail.com" className="text-tiny lg:text-small text-center">
+                  <a href="mailto:allaham@gmail.com" className="text-tiny lg:text-smaller text-center">
                     allaham@gmail.com
                   </a>
                 </div>
@@ -54,9 +54,9 @@ const ContactMap = () => {
                   <div className="pb-10">
                     <img src={Location} alt="" />
                   </div>
-                  <p className="text-tiny lg:text-small font-light">
+                  <p className="text-tiny lg:text-smaller font-light">
                     Syria - Damascus - dumer
-                    <br />
+                    
                     Al Mazraa Street
                   </p>
                 </div>
@@ -67,7 +67,7 @@ const ContactMap = () => {
                     {t("FollowUs")}
                   </p>
                   <div className="grid grid-cols-2 lg:grid-cols-4">
-                    <div className="  p-2 text-small lg:text-med cursor-pointer">
+                    <div className="  p-2 text-small lg:text-small cursor-pointer">
                       <a
                         href="https://www.facebook.com/elevatepremierlimo/"
                         target="_blank"
@@ -75,7 +75,7 @@ const ContactMap = () => {
                         <MdFacebook />
                       </a>
                     </div>
-                    <div className=" p-2 text-small lg:text-med cursor-pointer">
+                    <div className=" p-2 text-small lg:text-small cursor-pointer">
                       <a
                         href="https://www.instagram.com/elevatepremierelimo?igsh=MXpoZHB4emN3dWgz&utm_source=qr"
                         target="_blank"
@@ -83,7 +83,7 @@ const ContactMap = () => {
                         <FaInstagram />
                       </a>
                     </div>
-                    <div className=" p-2 text-small lg:text-med cursor-pointer">
+                    <div className=" p-2 text-small lg:text-small cursor-pointer">
                       <a
                         href="https://www.instagram.com/elevatepremierelimo?igsh=MXpoZHB4emN3dWgz&utm_source=qr"
                         target="_blank"
@@ -91,7 +91,7 @@ const ContactMap = () => {
                         <FaWhatsapp />
                       </a>
                     </div>
-                    <div className=" p-2 text-small lg:text-med cursor-pointer">
+                    <div className=" p-2 text-small lg:text-small cursor-pointer">
                       <a
                         href="https://www.instagram.com/elevatepremierelimo?igsh=MXpoZHB4emN3dWgz&utm_source=qr"
                         target="_blank"

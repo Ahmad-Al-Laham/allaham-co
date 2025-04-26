@@ -74,7 +74,7 @@ const CustomInput = ({
             id={id}
             value={value ?? ""}
             onChange={onChange}
-            className={`bg-transparent py-1 px-2 w-full outline-none placeholder:text-white ${customStyle} ${
+            className={`bg-transparent py-1 px-2 w-full outline-none placeholder:text-black placeholder:font-semibold ${customStyle} ${
               select && "cursor-pointer"
             }`}
             rows={textAreaRows ?? 15}
@@ -87,7 +87,7 @@ const CustomInput = ({
           <input
             type={type}
             //change placeholder color
-            className={`bg-transparent py-1 px-2 w-full outline-none placeholder:text-black ${customStyle} ${
+            className={`bg-transparent py-1 px-2 w-full outline-none placeholder:text-black placeholder:font-semibold ${customStyle} ${
               select && "cursor-pointer"
             }`}
             name={name}
